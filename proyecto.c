@@ -10,7 +10,7 @@ int main()
  {
 /* Menu Principal */
 	
-   printf("\t Sistema Ñummy \n\n");
+   printf("\t Sistema");printf(" %c",165); printf("ummy \n\n");
    printf("\t Menu Principal \n");
    printf("1. PERSONAS \n");
    printf("2. EMPRESAS \n");
