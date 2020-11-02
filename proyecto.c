@@ -9,9 +9,8 @@ int main()
  do
  {
 /* Menu Principal */
-<<<<<<< HEAD
 	system("cls");
-    printf("\t Sistema %cummy \n\n",165);
+    printf("\t Sistema %cummy  \n\n",165);
     printf("\t Menu Principal \n\n");
     printf("1. PERSONAS \n");
     printf("2. EMPRESAS \n");
@@ -20,17 +19,6 @@ int main()
     printf("0. SALIR \n");
    	printf("\n Introduzca una opcion: "); scanf("%d",&op);
    	system("cls");
-=======
-	
-   printf("\t Sistema");printf(" %c",165); printf("ummy \n\n");
-   printf("\t Menu Principal \n");
-   printf("1. PERSONAS \n");
-   printf("2. EMPRESAS \n");
-   printf("3. ORDENES DE ENVIO \n");
-   printf("4. CONSULTAS \n");
-   printf("0. SALIR \n");
-   printf("\n Introduzca opcion: "); scanf("%d",&op);
->>>>>>> f889c729f392e5e9b1665e88ad7238ab93e29d18
   
     switch(op)
 	{
