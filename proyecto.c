@@ -1,11 +1,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+<<<<<<< Updated upstream
 int main()
 {
  int op,opp,opep,ope,oppe,opoe,opc,opce,opcp,opcs;
  
  
+=======
+void mostrarportada(void);
+
+int main(void)
+{
+ int op,opp,opep,ope,oppe,opoe,opc,opce,opcp,opcs;
+ 
+
+>>>>>>> Stashed changes
  do
  {
 /* Menu Principal */
@@ -344,3 +354,20 @@ int main()
    return(0);
    
 } 
+<<<<<<< Updated upstream
+=======
+
+/*********************************************FUNCIONES Y PROCEDIMIENTOS **************************************************/
+ 	
+void mostrarportada(void)
+{	 
+	char hola[]="Sistema Nummy",nombre1[]="Jorge Leon",nombre2[]="Jose Felipe",nombre3[]="Pedro Leal",nombre4[]="Gianpiero Yorlano";
+	printf("\t\t%s",hola);
+	char nombre1[]="Jorge Leon",nombre2[]="Jose Felipe",nombre3[]="Pedro Leal",nombre4[]="Gianpiero Yorlano";
+	printf("\t\tSistema");printf(" %c",165); printf("ummy");
+	printf("\n\n\tIntegrantes del Proyecto: ");
+	printf("\n\n\t%s \n\t%s \n\t%s \n\t%s\n\n",nombre1,nombre2,nombre3,nombre4);
+	system("PAUSE");
+}
+
+>>>>>>> Stashed changes
