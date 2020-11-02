@@ -12,46 +12,11 @@ int main(void){
 				/*Codigo*/
 			case 2:
 				/*Codigo*/
-				do{
-					system("CLS");
-					printf("MENU EMPRESAS Y PRODUCTOS\n");
-					printf("1.-Entrar a Menu Empresas\n");
-					printf("2.-Entrar a Menu Productos\n");
-					printf("0.-Salir\n");
-					scanf("%d",&opeyp);
-					switch(opeyp){
-						case 1:
-							do{
-								system("CLS");
-								printf("\tMENU EMPRESAS\n")
-								printf("1.-Agregar empresa\n");
-								printf("2.-Modificar empresa\n");
-								printf("3.-Consultar empresa\n");
-								printf("4.-Eliminar empresa\n");
-								printf("0.-Volver a menu inicial\n");
-								scanf("%d",&ope);
-							}while(ope!=0);
-							break;
-						case 2:
-							do{
-								system("CLS");
-								printf("\tMENU PRODUCTOS\n")
-								printf("1.-Agregar producto\n");
-								printf("2.-Modificar producto\n");
-								printf("3.-Consultar producto\n");
-								printf("4.-Eliminar producto \n");
-								printf("0.-Volver a menu inicial\n");
-								scanf("%d",&ope);
-							break;
-						case 0:
-							break;
-						default:
-							break;
-					}
-					}while(op != 0);
-
-				};
-			case 3:
+				printf("1.-Agregar empresa");
+				printf("2.-Modificar empresa");
+				printf("3.-Consultar empresa");
+				printf("4.-Eliminar empresa");
+				printf("0.-Volver a menu inicial");
 				/*Codigo*/
 			case 4:
 				/*Codigo*/
