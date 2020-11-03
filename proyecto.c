@@ -21,13 +21,13 @@ int main(void)
 /* Menu Principal */
 	system("cls");
     printf("\t Sistema %cummy  \n\n",165);
-    printf("\t Menu Principal \n\n");
-    printf("1. PERSONAS \n");
-    printf("2. EMPRESAS \n");
-    printf("3. ORDENES DE ENVIO \n");
-    printf("4. CONSULTAS \n");
-    printf("0. SALIR \n");
-   	printf("\n Introduzca una opcion: "); scanf("%d",&op);
+    printf("\t Men%c Principal \n\n",163);
+    printf(" 1. PERSONAS \n");
+    printf(" 2. EMPRESAS \n");
+    printf(" 3. ORDENES DE ENVIO \n",224);
+    printf(" 4. CONSULTAS \n");
+    printf(" 0. SALIR \n");
+   	printf("\n Introduzca una opci%cn: ",162); scanf("%d",&op);
    	system("cls");
   
     switch(op)
@@ -36,13 +36,13 @@ int main(void)
         case 1: /* Menu Personas*/
          do
 		 {   system("cls");
-             printf("\t Bienvenido al Menu de Personas \n\n");
-             printf("Que desea realizar?\n\n");
-             printf("1. Agregar Personas \n");
-             printf("2. Modificar Persona \n");
-             printf("3. Eliminar Persona \n");
-             printf("0. Volver al menu principal\n\n");
-             printf("Introduzca una opcion: "); scanf("%d",&opp);
+             printf("\t Bienvenido al Menu de Personas \n\n "); printf("%c",168); 
+             printf("Qu%c desea realizar?\n\n", 130);
+             printf(" 1. Agregar Personas \n");
+             printf(" 2. Modificar Persona \n");
+             printf(" 3. Eliminar Persona \n");
+             printf(" 0. Volver al Men%c Principal\n\n", 163);
+             printf(" Introduzca una opci%cn: ",162); scanf("%d",&opp);
              system("cls");
               switch(opp)
               {
@@ -59,7 +59,7 @@ int main(void)
                		break;
                		
                default:
-               	   printf("Opcion incorrecta debe introducir un numero entre 0 y 4. Intente nuevamente.\n");
+               	   printf("Opci%cn incorrecta, debe introducir un n%cmero entre 0 y 4. Intente nuevamente.\n\n",162,163);
                	   system("PAUSE");
                	   break;
 			  }
@@ -70,12 +70,12 @@ int main(void)
 	        do
 	        {
 	             system("cls");
-	 			 printf("\t Bienvenido al Menu de Empresas y Productos \n\n"); printf("%c",168); 
-				 printf("Donde desea entrar? \n\n");
-				 printf("1. Menu Empresas \n");
-				 printf("2. Menu Productos \n");  
-				 printf("0. Volver al menu principal\n\n");
-				 printf("Introduzca una opcion: ");	 scanf("%d",&opep);
+	 			 printf("\t Bienvenido al Menu de Empresas y Productos \n\n "); printf("%c",168); 
+				 printf("D%cnde desea entrar? \n\n",162);
+				 printf(" 1. Men%c Empresas \n", 163);
+				 printf(" 2. Men%c Productos \n", 163);  
+				 printf(" 0. Volver al Men%c Principal\n\n", 163);
+				 printf(" Introduzca una opci%cn: ",162);	 scanf("%d",&opep);
 				 system("cls");
 				 switch(opep)
 				 {
@@ -83,14 +83,14 @@ int main(void)
 				 		do
 				 		{
 					 	   system("cls");	
-					 	   printf("Bienvenido al Menu de Empresas \n\n"); printf("%c",168);
-						   printf("Que desea hacer? \n\n");
-						   printf("1. Agregar empresa \n");
-						   printf("2. Modificar empresa \n");
-						   printf("3. Consultar empresa \n");
-						   printf("4. Eliminar empresa \n");
-						   printf("0. Volver al menu de Empresas\n\n");
-						   printf("Introduzca una opcion: "); scanf("%d",&ope);
+					 	   printf("Bienvenido al Menu de Empresas \n\n "); printf("%c",168);
+						   printf("Qu%c desea hacer? \n\n", 130);
+						   printf(" 1. Agregar empresa \n");
+						   printf(" 2. Modificar empresa \n");
+						   printf(" 3. Consultar empresa \n");
+						   printf(" 4. Eliminar empresa \n");
+						   printf(" 0. Volver al Men%c de Empresas y Productos\n\n", 163);
+						   printf(" Introduzca una opci%cn: ",162); scanf("%d",&ope);
 						   system("cls");
 						   switch(ope)
 						   {
@@ -110,7 +110,7 @@ int main(void)
 						   		break;
 						   	
 						   	default:
-						   		printf("Opcion incorrecta debe introducir un numero entre 0 y 4. Intente nuevamente.\n\n");
+						   		printf("Opci%cn incorrecta, debe introducir un n%cmero entre 0 y 4. Intente nuevamente.\n\n",162,163);
 						   		system("PAUSE");
 						   		break;	
 						   }
@@ -121,15 +121,14 @@ int main(void)
 					 	do
 					 	{
 					 	   system("cls");
-					 	   printf("Bienvenido al Menu de Productos\n\n"); printf("%c",168);
-					 	   printf("Que desea hacer? \n\n");
-					 	   printf("1. Agregar producto \n");
-					 	   printf("2. Modificar producto \n");
-					 	   printf("3. Consultar producto \n");
-					 	   printf("4. Eliminar producto \n");
-					 	   printf("0. Volver al menu principal \n\n");
-					 	   printf("Introduzca una opcion: "); scanf("%d",&oppe);
-					 	   
+					 	   printf("Bienvenido al Menu de Productos\n\n "); printf("%c",168);
+					 	   printf("Qu%c desea hacer? \n\n", 130);
+					 	   printf(" 1. Agregar producto \n");
+					 	   printf(" 2. Modificar producto \n");
+					 	   printf(" 3. Consultar producto \n");
+					 	   printf(" 4. Eliminar producto \n");
+					 	   printf(" 0. Volver al Men%c de Empresas y Productos \n\n", 163);
+					 	   printf(" Introduzca una opci%cn: ",162); scanf("%d",&oppe);
 					 	   system("cls");
 					 	   switch(oppe)
 					 	   {
@@ -149,7 +148,7 @@ int main(void)
 					 	   	 	break;
 					 	   	 
 					 	   	 default:
-					 	   	 	printf("Opcion incorrecta, debe introducir un numero entre 0 y 4. Intente nuevamente.\n\n");
+					 	   	 	printf("Opci%cn incorrecta, debe introducir un n%cmero entre 0 y 4. Intente nuevamente.\n\n",162,163);
 					 	   	 	system("PAUSE");
         						break;
 					       }
@@ -166,15 +165,15 @@ int main(void)
 	        do
 	        {
 	        	 system("cls");
-	             printf("\t Bienvenido al Menu Ordenes de envio \n\n"); printf("%c",168);
-	             printf("Que desea hacer? \n\n");
-	             printf("1. Solicitar envio \n");
-	             printf("2. Modificar envio \n");
-	             printf("3. Consultar envio \n");
-	             printf("4. Cierre de envio \n");
-	             printf("5. Eliminar envio \n");
-	             printf("0. Volver al menu principal \n\n");
-	             printf("Introduzca una opcion: "); scanf("%d",&opoe);
+	             printf("\t Bienvenido al Menu Ordenes de envio \n\n "); printf("%c",168);
+	             printf("Qu%c desea hacer? \n\n", 130);
+	             printf(" 1. Solicitar env%co \n", 161);
+	             printf(" 2. Modificar env%co \n", 161);
+	             printf(" 3. Consultar env%co \n", 161);
+	             printf(" 4. Cierre de env%co \n", 161);
+	             printf(" 5. Eliminar env%co \n", 161);
+	             printf(" 0. Volver al Men%c Principal \n\n", 163);
+	             printf(" Introduzca una opci%cn: ",162); scanf("%d",&opoe);
 	             system("cls");
 	             switch(opoe)
 	             {
@@ -197,7 +196,7 @@ int main(void)
 				   		break;
 				
 				   default:
-					 	printf("Opcion incorrecta, debe introducir un numero entre 0 y 4. Intente nuevamente.\n\n");
+					 	printf("Opci%cn incorrecta, debe introducir un n%cmero entre 0 y 4. Intente nuevamente.\n\n",162,163);
 					 	system("PAUSE");
         				break;
 				 }
@@ -209,13 +208,13 @@ int main(void)
 	        do
 	        {
 	          system("cls");
-	          printf("\t Bienvenido al Menu de Consultas \n\n"); printf("%c",168);
-	          printf("Que desea consultar? \n\n");
-	          printf("1. Empresas\n");
-	          printf("2. Personas\n");
-	          printf("3. Sistema\n");
-	          printf("0. Volver al menu principal\n\n");
-	          printf("Introduzca una opcion: "); scanf("%d",&opc);
+	          printf("\t Bienvenido al Menu de Consultas \n\n "); printf("%c",168);
+	          printf("Qu%c desea consultar? \n\n", 130);
+	          printf(" 1. Empresas\n");
+	          printf(" 2. Personas\n");
+	          printf(" 3. Sistema\n");
+	          printf(" 0. Volver al Men%c Principal\n\n", 163);
+	          printf(" Introduzca una opci%cn: ",162); scanf("%d",&opc);
 	          system("cls");
 	          switch(opc)
 	          {
@@ -223,15 +222,15 @@ int main(void)
 		          	do
 		          	{
 		          	   system("cls");
-		          	   printf("Bienvenido al Menu Consulta de Empresas\n\n"); printf("%c",168);
-		          	   printf("Que desea ver?\n\n");
-		          	   printf("1. Movimiento del sistema\n");
-		          	   printf("2. Movimiento de empresa\n");
-		          	   printf("3. Movimiento de cliente\n");
-		          	   printf("4. Notoriedad en clientes\n");
-		          	   printf("5. Notoriedad en empresas\n");
-		          	   printf("0. Volver al menu\n\n");
-		          	   printf("Introduzca una opcion: "); scanf("%d",&opce);
+		          	   printf("Bienvenido al Menu Consulta de Empresas\n\n "); printf("%c",168);
+		          	   printf("Qu%c desea ver?\n\n", 130);
+		          	   printf(" 1. Movimiento del sistema\n");
+		          	   printf(" 2. Movimiento de empresa\n");
+		          	   printf(" 3. Movimiento de cliente\n");
+		          	   printf(" 4. Notoriedad en clientes\n");
+		          	   printf(" 5. Notoriedad en empresas\n");
+		          	   printf(" 0. Volver al Men%c de Consultas\n\n", 163);
+		          	   printf(" Introduzca una opci%cn: ",162); scanf("%d",&opce);
 		          	   system("cls");
 		          	   switch(opce)
 		          	   {
@@ -254,7 +253,7 @@ int main(void)
 		          	   	 	break;
 		          	   	 
 		          	   	 default:
-		          	   	 	printf("Opcion incorrecta, debe introducir un numero entre 0 y 4. Intente nuevamente.\n\n");
+		          	   	 	printf("Opci%cn incorrecta, debe introducir un n%cmero entre 0 y 4. Intente nuevamente.\n\n",162,163);
 		          	   	 	system("PAUSE");
 		          	   	 	break;
 					   }
@@ -265,12 +264,12 @@ int main(void)
 		          	do
 		          	{
 		          	   system("cls");
-		          	   printf("Bienvenido al Menu Consulta de Personas\n\n"); printf("%c",168);
-		          	   printf("Que desea ver?\n\n");
-		          	   printf("1. Persona en general\n");
-		          	   printf("2. Persona y empresa\n");
-		          	   printf("0. Volver al menu\n\n");
-		          	   printf("Introduzca una opcion: "); scanf("%d",&opcp);
+		          	   printf("Bienvenido al Menu Consulta de Personas\n\n "); printf("%c",168);
+		          	   printf("Qu%c desea ver?\n\n", 130);
+		          	   printf(" 1. Persona en general\n");
+		          	   printf(" 2. Persona y empresa\n");
+		          	   printf(" 0. Volver al Men%c de Consultas\n\n", 163);
+		          	   printf(" Introduzca una opci%cn: ",162); scanf("%d",&opcp);
 		          	   system("cls");
 		          	   switch(opcp)
 		          	   {
@@ -279,9 +278,12 @@ int main(void)
 		          	   	
 		          	   	case 2: /*Persona y empresa*/
 		          	   	   	break;
+		          	   	
+		          	   	case 0:
+		          	   		break;
 		          	    	
 		          	    default:
-		          	    	printf("Opcion incorrecta, debe introducir un numero entre 0 y 4. Intente nuevamente.\n\n");
+		          	    	printf("Opci%cn incorrecta, debe introducir un n%cmero entre 0 y 4. Intente nuevamente.\n\n",162,163);
 		          	    	system("PAUSE");
 		          	    	break;
 						 }
@@ -292,15 +294,15 @@ int main(void)
 		          	do
 		          	{
 		              system("cls");
-		          	  printf("\t Bienvenido al Menu Consulta del Sistema\n\n"); printf("%c",168);
-		          	  printf("Que desea ver?\n\n");
-		          	  printf("1. Ingreso por empresa\n");
-		          	  printf("2. Producto vendido por empresa\n");
-		          	  printf("3. Compra por persona\n");
-		          	  printf("4. Producto comprado por persona\n");
-		          	  printf("5. Nro de facturas\n");
-		          	  printf("0. Volver al menu\n\n");
-		          	  printf("Introduzca una opcion: "); scanf("%d",&opcs);
+		          	  printf("\t Bienvenido al Menu Consulta del Sistema\n\n "); printf("%c",168);
+		          	  printf("Qu%c desea ver?\n\n", 130);
+		          	  printf(" 1. Ingreso por empresa\n");
+		          	  printf(" 2. Producto vendido por empresa\n");
+		          	  printf(" 3. Compra por persona\n");
+		          	  printf(" 4. Producto comprado por persona\n");
+		          	  printf(" 5. Nro de facturas\n");
+		          	  printf(" 0. Volver al Men%c de Consultas\n\n", 163);
+		          	  printf(" Introduzca una opci%cn: ",162); scanf("%d",&opcs);
 		          	  
 		          	  system("cls");
 		          	  switch(opcs)
@@ -320,8 +322,11 @@ int main(void)
 		          	  	case 5: /*nro de facturas*/
 		          	  	  	break;
 		          	  		
+		          	  	case 0:
+		          	  		break;
+		          	  		
 		          	  	default:
-		          	  		printf("Opcion incorrecta, debe introducir un numero entre 0 y 4. Intente nuevamente.\n\n");
+		          	  		printf("Opci%cn incorrecta, debe introducir un n%cmero entre 0 y 4. Intente nuevamente.\n\n",162,163);
 		          	  		system("PAUSE");
 		          	  		break;
 					  }
@@ -333,7 +338,7 @@ int main(void)
 		        	break;
 		          	
 		        default:
-		        	printf("Opcion incorrecta, debe introducir un numero entre 0 y 4. Intente nuevamente.\n\n");
+		        	printf("Opci%cn incorrecta, debe introducir un n%cmero entre 0 y 4. Intente nuevamente.\n\n",162,163);
 		        	system("PAUSE");
 		        	break;
 				  }
@@ -344,7 +349,7 @@ int main(void)
 			break;   
         
         default:
-        	printf("Opcion incorrecta, debe introducir un numero entre 0 y 4. Intente nuevamente.\n\n");
+        	printf("Opci%cn incorrecta, debe introducir un n%cmero entre 0 y 4. Intente nuevamente.\n\n",162,163);
         	system("PAUSE");
         	break;
 	}
