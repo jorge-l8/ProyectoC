@@ -1,0 +1,97 @@
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+
+struct empresa{
+	int codigo,tipo;
+	char nombre[20],direccion[40],telefono[12];
+};
+
+int main(void){
+	int prueba,ope,i=0;
+	printf("Escoja el numero 1: ");
+	scanf("%i",&prueba);
+	switch (prueba){
+		case 1:
+	do{
+	 printf("\n\nBienvenido al menu de empresas \n\n"); printf("%c",168);
+				   printf("Que desea hacer? \n");
+				   printf("1. Agregar empresa \n");
+				   printf("2. Modificar empresa \n");
+				   printf("3. Consultar empresa \n");
+				   printf("4. Eliminar empresa \n");
+				   printf("0. Volver al menu \n\n");
+				   printf("Introduzca una opcion: "); scanf("%d",&ope);
+				   
+				   system("cls");
+				   switch(ope)
+				   {
+				   	case 1: /* Agregar Empresa*/
+				   	struct empresa pro1;
+					printf("Codigo de empresa: \n");
+					scanf("%i",&pro1.codigo);
+					system("cls");
+					fflush(stdin);
+					printf("Nombre de empresa: \n");
+					gets(pro1.nombre);
+					system("cls");
+					do{
+					printf("Tipo de empresa \n");
+					printf("Opciones: (1)Comida (2)Alimentos (3)General \n");
+					scanf("%i",&pro1.tipo);
+					if (pro1.tipo != 1 && pro1.tipo != 2 && pro1.tipo != 3){
+						printf("No selecciono bien la empresa. Vuelva a intentarlo\n\n");
+					}
+					}while (pro1.tipo != 1 && pro1.tipo != 2 && pro1.tipo != 3);
+					system("cls");
+					fflush(stdin);	
+					printf("Telefono de la empresa: \n");
+					gets(pro1.telefono);
+					system("cls");
+					fflush(stdin);
+					printf("Direccion de la empresa: \n");
+					gets(pro1.direccion);
+					system("cls");
+				   	
+				   	break;
+				   	
+				   	case 2: /* Modificar Empresa*/
+				   	
+				   	break;
+				   	
+				   	case 3: /* Consultar Empresa*/
+				   	printf("El codigo de la empresa es: %i",pro1.codigo);
+					printf("\nEl nombre de la empresa es: %s",pro1.nombre);
+	
+					if (pro1.tipo == 1){
+						printf("\nEl tipo de empresa es de Comida");
+					}
+					else if (pro1.tipo == 2){
+						printf("\nEl tipo de empresa es de Alimentos");
+					}
+					else if (pro1.tipo == 3){
+						printf("\nEl tipo de empresa es General");
+					}
+	
+					printf("\nEl telefono de la empresa es: %s",pro1.telefono);
+					printf("\nLa direccion de la empresa es: %s",pro1.direccion);
+				   	
+				   	break;
+				   	
+				   	case 4: /* Eliminar Empresa*/
+				   	
+				   	break;
+				   	
+				   	case 0: /* Vuelve al menu*/
+				   	break;
+				   	
+				   	default:
+				   		printf("Opcion introducida incorrecta");
+				   	break;
+				   	
+				   }
+			    }while(ope!=0);
+			 	break;
+			}
+	return 0;
+	}
