@@ -96,12 +96,77 @@ int main(void){
 				   	break;
 				   	
 				   	case 2: /* Modificar Empresa*/
-				   		switch(modificar){
-				   			case 1: 
-				   				
+				   	do{
+						printf("%c",168); printf("Que desea modifica?: \n");
+						printf("1. Codigo de empresa \n");
+						printf("2. Nombre de empresa \n");
+						printf("3. Tipo de empresa \n");
+						printf("4. Telefono de empresa \n");   
+						printf("0. Volver al menu \n");
+						printf("Introduzca una opcion: "); scanf("%d",&modificar);
+						system("cls");
+						switch(modificar){	
 				   			
-				   			
-						   }
+							case 1: 
+				   			struct Empresa pro1;	
+								do{
+								printf("Introduzca el nuevo codigo de empresa(0-9999): \n");
+								scanf("%i",&pro1.codigo);
+								system("cls");
+									if(pro1.codigo<=0 || pro1.codigo>9999){
+									printf("Introduzca un numero entre 1 y 9999.\n\n");
+									system("PAUSE");
+									}
+								system("cls");
+								}while(pro1.codigo<=0 || pro1.codigo>9999);
+							break;   		
+						   	
+						   	case 2:
+						   	do{
+								printf("Introduzca el nuevo nombre de empresa: \n");
+								fgets(pro1.nombre, 20, stdin);
+								system("cls");
+									if(!(validarstring(pro1.nombre))){
+										printf("Validar string retorna: %d\n\n",validarstring(pro1.nombre));
+										printf("Introduzca una cadena de caracteres. Intente nuevamente\n\n");
+										system("PAUSE");
+									}	
+									system("cls");
+							}while(!validarstring(pro1.nombre));
+							break;
+					
+						case 3:
+						do{
+							printf("Introduzca el nuevo tipo de empresa \n");
+							printf("Opciones: (1)Comida (2)Alimentos (3)General \n");
+							scanf("%i",&pro1.tipo);
+								if (pro1.tipo != 1 && pro1.tipo != 2 && pro1.tipo != 3){
+								printf("No selecciono bien la empresa. Vuelva a intentarlo\n\n");
+								system("PAUSE");
+						}	
+							system("cls");
+						}while (pro1.tipo != 1 && pro1.tipo != 2 && pro1.tipo != 3);
+						break;	
+					
+						case 4:
+						do{
+							printf("Introduzca el nuevo telefono de la empresa: \n");
+							fgets(pro1.telefono, 12, stdin);
+								if(!(validarnumeros(pro1.telefono))){
+							printf("El telefono debe estar compuesto solo de numeros.\n\n");
+							system("PAUSE");
+						}					
+							system("cls");
+						}while(!(validarnumeros(pro1.telefono)));
+						break;
+					
+						case 5:
+							printf("Introduzca la nueva direccion de la empresa: \n");
+							fgets(pro1.direccion, 40, stdin);
+							system("cls");
+						break;
+						}
+				    }while (modificar!=0);
 				   	
 				   	break;
 				   	
@@ -131,6 +196,7 @@ int main(void){
 				   	memset(pro1.nombre, 0, 20);
 				   	memset(pro1.telefono, 0, 12);
 				   	pro1.tipo = 0;
+				   	printf("\nSe ha eliminado la empresa anteriormente agregada");
 				   	
 				   	break;
 				   	
