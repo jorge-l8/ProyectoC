@@ -49,6 +49,7 @@ void ValidarP(struct Personas *pers);
 void ConsultarP(struct Personas *pers);
 void ModificarP(struct Personas *pers);
 void EliminarP(struct Personas *pers);
+int ValidarPN(struct Personas *pers);
 
 /*Funciones Envios*/
 void modificarenvio(struct Envio *p, int persona, int tipoe, int numfactura);
@@ -64,9 +65,10 @@ void eliminarproducto(struct Producto *prod);
 
 int main()
 {
- int op,opp,opep,ope,oppe,opoe,opc,opce,opcp,opcs,modificar;
+ int op,opp,opep,ope,oppe,opoe,opc,opce,opcp,opcs;
  struct Personas per;
  /*Variables parte empresas*/
+ int modificar;
  struct Empresa emp1;
  /*Variables parte envios*/
  int  num, cod, opmeoe;
@@ -114,6 +116,7 @@ int main()
               	case 1: /* Agregar Persona*/
               	  printf("Introduzca los siguientes datos\n para agregar a una persona\n\n");
      	          AgregarP(&per);
+		  ValidarPN(&per);	      
      	      
      	          system("cls");
               	break;
