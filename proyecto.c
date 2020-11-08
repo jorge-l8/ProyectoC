@@ -63,7 +63,7 @@ void eliminarproducto(struct Producto *prod);
 
 int main()
 {
- int op,opp,opep,ope,oppe,opoe,opc,opce,opcp,opcs;
+ int op,opp,opep,ope,oppe,opoe,opc,opce,opcp,opcs,modificar;
  struct Personas per;
  /*Variables parte empresas*/
  struct Empresa emp1;
@@ -172,80 +172,173 @@ int main()
 					   switch(ope)
 					   {
 					   	case 1: /* Agregar Empresa */
-					   	do{
-							printf("Codigo de empresa(0-9999): \n");
-							scanf("%i",&emp1.codigo);
-							system("cls");
-							if(emp1.codigo<=0 || emp1.codigo>9999){
-								printf("Introduzca un numero entre 1 y 9999.\n\n");
-								system("PAUSE");
-							}
-							system("cls");
-						}while(emp1.codigo<=0 || emp1.codigo>9999);
-						fflush(stdin);
-						do{
-							printf("Nombre de empresa: \n");
-							fgets(emp1.nombre,20,stdin);
-							eliminarnl(emp1.nombre);
-							system("cls");
-							if(!(validarstring(emp1.nombre))){
-								printf("Validar string retorna: %d\n\n",validarstring(emp1.nombre));
-								printf("Introduzca una cadena de caracteres. Intente nuevamente\n\n");
-								system("PAUSE");
-							}	
-							system("cls");
-						}while(!(validarstring(emp1.nombre)));
-						do{
-						printf("Tipo de empresa \n");
-						printf("Opciones: (1)Comida (2)Alimentos (3)General \n");
-						scanf("%i",&emp1.tipo);
-						if (emp1.tipo != 1 && emp1.tipo != 2 && emp1.tipo != 3){
-							printf("No selecciono bien la empresa. Vuelva a intentarlo\n\n");
+				   	struct Empresa emp1;
+				   	do{
+						printf("\nCodigo de empresa(0-9999): \n");
+						scanf("%i",&emp1.codigo);
+						system("cls");
+						if(emp1.codigo<=0 || emp1.codigo>9999){
+							printf("\nIntroduzca un numero entre 1 y 9999.\n\n");
 							system("PAUSE");
 						}
 						system("cls");
-						}while (emp1.tipo != 1 && emp1.tipo != 2 && emp1.tipo != 3);
-						fflush(stdin);	
-						do{
-						printf("Telefono de la empresa: \n");
-						fgets(emp1.nombre,12,stdin);
+					}while(emp1.codigo<=0 || emp1.codigo>9999);	
+					do{	
+						printf("\nNombre de empresa: \n");
+						fflush(stdin);
+						fgets(emp1.nombre, 20, stdin);
+						system("cls");
 						eliminarnl(emp1.nombre);
-						if(!(validarnumeros(emp1.telefono))){
-							printf("El telefono debe estar compuesto solo de numeros.\n\n");
+						if(!(validarstring(emp1.nombre))){
+							printf("Validar string retorna: %d\n\n",validarstring(emp1.nombre));
+							printf("Introduzca una cadena de caracteres. Intente nuevamente\n\n");
 							system("PAUSE");
-						}					
+						}	
 						system("cls");
+					}while(!validarstring(emp1.nombre));
+					do{
+					printf("\nTipo de empresa \n");
+					printf("\nOpciones: (1)Comida (2)Alimentos (3)General \n");
+					scanf("%i",&emp1.tipo);
+					if (emp1.tipo != 1 && emp1.tipo != 2 && emp1.tipo != 3){
+						printf("\nNo selecciono bien la empresa. Vuelva a intentarlo\n\n");
+						system("PAUSE");
+					}
+					system("cls");
+					}while (emp1.tipo != 1 && emp1.tipo != 2 && emp1.tipo != 3);	
+					do{
+					printf("\nTelefono de la empresa: \n");
+					fflush(stdin);
+					fgets(emp1.telefono, 12, stdin);
+					eliminarnl(emp1.telefono);
+					if(!(validarnumeros(emp1.telefono))){
+						printf("El telefono debe estar compuesto solo de numeros.\n\n");
+						system("PAUSE");
+					}					
+					system("cls");
+					}while(!(validarnumeros(emp1.telefono)));
+					printf("\nDireccion de la empresa: \n");
+					fflush(stdin);
+					fgets(emp1.direccion, 40, stdin);
+					system("cls");
+				   	
+				   	break;
+				   	
+				   	case 2: /* Modificar Empresa*/
+				   	do{
+						printf("\t\t%c",168); printf("Que desea modifica?: \n");
+						printf("\t1. Codigo de empresa \n");
+						printf("\t2. Nombre de empresa \n");
+						printf("\t3. Tipo de empresa \n");
+						printf("\t4. Telefono de empresa \n");   
+						printf("\t5. Direccion de la empresa \n");
+						printf("\t0. Volver al menu \n");
+						printf("\tIntroduzca una opcion: "); scanf("%d",&modificar);
+						system("cls");
+						switch(modificar){	
+				   			
+							case 1: 
+				   			struct Empresa emp1;	
+								emp1.codigo = 0;
+								do{
+								printf("\nIntroduzca el nuevo codigo de empresa(0-9999): \n");
+								scanf("%i",&emp1.codigo);
+								system("cls");
+									if(emp1.codigo<=0 || emp1.codigo>9999){
+									printf("\nIntroduzca un numero entre 1 y 9999.\n\n");
+									system("PAUSE");
+									}
+								system("cls");
+								}while(emp1.codigo<=0 || emp1.codigo>9999);
+							break;   		
+						   	
+						   	case 2:
+							memset(emp1.nombre, 0, 20);	
+								do{
+								printf("\nIntroduzca el nuevo nombre de empresa: \n");
+								fflush(stdin);
+								fgets(emp1.nombre, 20, stdin);
+								system("cls");
+									eliminarnl(emp1.nombre);
+										if(!(validarstring(emp1.nombre))){
+										printf("Validar string retorna: %d\n\n",validarstring(emp1.nombre));
+										printf("Introduzca una cadena de caracteres. Intente nuevamente\n\n");
+										system("PAUSE");
+									}	
+									system("cls");
+							}while(!validarstring(emp1.nombre));
+							break;
+					
+						case 3:
+						emp1.tipo = 0;
+						do{
+							printf("\nIntroduzca el nuevo tipo de empresa \n");
+							printf("\nOpciones: (1)Comida (2)Alimentos (3)General \n");
+							scanf("%i",&emp1.tipo);
+								if (emp1.tipo != 1 && emp1.tipo != 2 && emp1.tipo != 3){
+								printf("\nNo selecciono bien la empresa. Vuelva a intentarlo\n\n");
+								system("PAUSE");
+						}	
+							system("cls");
+						}while (emp1.tipo != 1 && emp1.tipo != 2 && emp1.tipo != 3);
+						break;	
+					
+						case 4:
+						memset(emp1.telefono, 0, 12);
+						do{
+							printf("\nIntroduzca el nuevo telefono de la empresa: \n");
+							fflush(stdin);
+							fgets(emp1.telefono, 12, stdin);
+							eliminarnl(emp1.telefono);	
+								if(!(validarnumeros(emp1.telefono))){
+								printf("\nEl telefono debe estar compuesto solo de numeros.\n\n");
+								system("PAUSE");
+								}					
+							system("cls");
 						}while(!(validarnumeros(emp1.telefono)));
-						fflush(stdin);
-						printf("Direccion de la empresa: \n");
-						fgets(emp1.direccion,40,stdin);
-						eliminarnl(emp1.direccion);
-						system("cls");
-					   	break;
-					   	
-					   	case 2: /* Modificar Empresa*/
-					   	
-					   	break;
-					   	
-					   	case 3: /* Consultar Empresa*/
-					   	printf("El codigo de la empresa es: %i",emp1.codigo);
-						printf("\nEl nombre de la empresa es: %s",emp1.nombre);
-						if (emp1.tipo == 1){
-							printf("\nEl tipo de empresa es de Comida");
+						break;
+					
+						case 5:
+							memset(emp1.direccion, 0, 40);
+							printf("\nIntroduzca la nueva direccion de la empresa: \n");
+							fflush(stdin);
+							fgets(emp1.direccion, 40, stdin);
+							system("cls");
+						break;
 						}
-						else if (emp1.tipo == 2){
-							printf("\nEl tipo de empresa es de Alimentos");
-						}
-						else if (emp1.tipo == 3){
-							printf("\nEl tipo de empresa es General");
-						}
-						printf("\nEl telefono de la empresa es: %s",emp1.telefono);
-						printf("\nLa direccion de la empresa es: %s",emp1.direccion);
-					   	break;
-					   	
-					   	case 4: /* Eliminar Empresa*/
-					   	
-					   	break;
+				    }while (modificar!=0);
+				   	
+				   	break;
+				   	
+				   	case 3: /* Consultar Empresa*/
+				   	printf("El codigo de la empresa es: %i",emp1.codigo);
+					printf("\nEl nombre de la empresa es: %s",emp1.nombre);
+					if (emp1.tipo == 1){
+						printf("\nEl tipo de empresa es de Comida");
+					}
+					else if (emp1.tipo == 2){
+						printf("\nEl tipo de empresa es de Alimentos");
+					}
+					else if (emp1.tipo == 3){
+						printf("\nEl tipo de empresa es General");
+					}
+					printf("\nEl telefono de la empresa es: %s",emp1.telefono);
+					printf("\nLa direccion de la empresa es: %s\n\n",emp1.direccion);
+				   	system("pause");
+				   	system("cls");
+					break;
+				   	
+				   	
+				   	case 4: /* Eliminar Empresa*/
+				   	
+					emp1.codigo = 0;
+				   	memset(emp1.direccion, 0, 40);
+				   	memset(emp1.nombre, 0, 20);
+				   	memset(emp1.telefono, 0, 12);
+				   	emp1.tipo = 0;
+				   	printf("\tSe ha eliminado la empresa anteriormente agregada\n\n");
+				   	
+				   	break;
 					   	
 					   	case 0: /* Vuelve al menu*/
 					   	break;
