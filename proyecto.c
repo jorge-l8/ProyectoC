@@ -1007,6 +1007,41 @@ void EliminarP(struct Personas *pers) /*Funcion eliminar Persona*/
    system("pause");
 } /*Fin eliminar Persona*/
 
+int ValidarPN(struct Personas *pers)
+{
+   int x= pers->ci, y=pers->fn, fn1,fn2,fn3,fn4,cont;
+   printf("\n\nEscriba 0 para continuar");
+   
+    if((scanf("%d",&x)!=1) && (scanf("%d",&y)!=1))
+   {
+   	return 0;
+	   }
+    else
+    {
+     
+	 for(cont=0; cont>=6 && cont<=8; cont++)
+	 {
+	 	y/=10;
+	 
+	 if(cont>=6 && cont<=8)
+	 {
+	 	fn1=pers->fn/10000; //yyyy
+	 	fn2=pers->fn%10000;
+	 	fn3=fn2/100; //mm
+	 	fn4=fn2%100; //dd
+	 	
+	 	if((fn1>=1900||fn1<=2100) && (fn3>=1||fn3<=12) &&(fn4>=1||fn4<=31))
+	 	{
+	 		return 1;
+	    }
+	 }	
+	}  	
+	}
+
+	  return 1;
+
+}/*Fin validar fecha*/
+
 
 /**********************************************************************FUNCIONES PRODUCTOS**********************************************************************/
 
